@@ -3,7 +3,7 @@
 
 @include('backend.layouts.head')
 
-<body id="page-top">
+<body id="page-top" class="{{session('theme','light')}}">
 
   <!-- Page Wrapper -->
   <div id="wrapper">

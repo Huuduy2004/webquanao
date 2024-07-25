@@ -24,11 +24,11 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Tất Cả Tài Khoản') }}</a>
-                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Phân Quyền') }}</a>
-                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('settings')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Cài Đặt') }}</a>
-                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('about-us.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Về Chúng Tôi') }}</a>
-                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('message.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Liên Hệ') }}</a>
+                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{ route('users.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Tất Cả Tài Khoản') }}</a>
+                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="#"> <i class="fa fa-network-wired mr-2"></i> {{ __('Phân Quyền') }}</a>
+                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('settings')}}"> <i class="fa fa-wrench mr-2"></i> {{ __('Cài Đặt') }}</a>
+                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('about-us.index')}}"> <i class="fa fa-info mr-2"></i> {{ __('Về Chúng Tôi') }}</a>
+                <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('message.index')}}"> <i class="fa fa-phone mr-2"></i> {{ __('Liên Hệ') }}</a>
             </div>
         </div>
     </li>
@@ -39,12 +39,12 @@
         </a>
         <div id="collapseProduct" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}" href="{{ route('category.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Danh Mục') }}</a>
-                <a class="collapse-item {{ request()->is('admin/tags') || request()->is('admin/tags/*') ? 'active' : '' }}" href="{{ route('brand.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Thương Hiệu') }}</a>
-                <a class="collapse-item {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}" href="{{ route('product.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Sản Phẩm') }}</a>
-                <a class="collapse-item {{ request()->is('admin/reviews') || request()->is('admin/reviews/*') ? 'active' : '' }}" href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Đánh Giá') }}</a>
+                <a class="collapse-item {{ request()->is('admin/categories') || request()->is('admin/categories/*') ? 'active' : '' }}" href="{{ route('category.index') }}"> <i class="fa fa-folder mr-2"></i> {{ __('Danh Mục') }}</a>
+                <a class="collapse-item {{ request()->is('admin/tags') || request()->is('admin/tags/*') ? 'active' : '' }}" href="{{ route('brand.index') }}"> <i class="fa fa-trademark mr-2"></i> {{ __('Thương Hiệu') }}</a>
+                <a class="collapse-item {{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}" href="{{ route('product.index') }}"> <i class="fa fa-procedures mr-2"></i> {{ __('Sản Phẩm') }}</a>
+                <a class="collapse-item {{ request()->is('admin/reviews') || request()->is('admin/reviews/*') ? 'active' : '' }}" href="#"> <i class="fa fa-pen-alt mr-2"></i> {{ __('Đánh Giá') }}</a>
                 <a class="collapse-item {{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active' : '' }}" href="{{ route('banner.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Banner') }}</a>
-                <a class="collapse-item {{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active' : '' }}" href="{{ route('coupon.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Mã Giảm Giá') }}</a>
+                <a class="collapse-item {{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active' : '' }}" href="{{ route('coupon.index') }}"> <i class="fa fa-ticket-alt mr-2"></i> {{ __('Mã Giảm Giá') }}</a>
                 <a class="collapse-item {{ request()->is('admin/slides') || request()->is('admin/slides/*') ? 'active' : '' }}" href="{{route('supplier.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Nhà Cung Cấp') }}</a>
             </div>
         </div>
@@ -57,9 +57,9 @@
         <div id="collapseOrder" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item " href="{{route('order.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Tất cả đơn hàng') }}</a>
-                <a class="collapse-item " href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Tiếp Nhận') }}</a>
+                <a class="collapse-item " href="{{route('order.store')}}"> <i class="fa fa-first-order-alt mr-2"></i> {{ __('Tiếp Nhận') }}</a>
                 <a class="collapse-item" href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Đang Xử Lý') }}</a>
-                <a class="collapse-item" href="#"> <i class="fa fa-briefcase mr-2"></i> {{ __('Hoàn Thành') }} ({{\App\Models\Order::countOrderSuccess()}})</a>
+                <a class="collapse-item" href="#"> <i class="fa fa-check-circle mr-2"></i> {{ __('Hoàn Thành') }} ({{\App\Models\Order::countOrderSuccess()}})</a>
             </div>
         </div>
     </li>
@@ -73,6 +73,29 @@
                 <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('post-category.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Loại Bài Viết') }}</a>
                 <a class="collapse-item {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}" href="{{route('post-tag.index')}}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Tag') }}</a>
                 <a class="collapse-item {{ request()->is('admin/reports/revenue') ? 'active' : '' }}" href="{{ route('post.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('Bài Viết') }}</a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link" data-toggle="collapse" data-target="#collapseDepartment" aria-expanded="true" aria-controls="collapseTwo">
+            <span>{{__('Quản lý phòng ban')}}</span>
+        </a>
+        <div id="collapseDepartment" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{route('department.index')}}"> <i class="fa fa-person-booth mr-2">{{ __('Danh sách')}}</i></a>
+                <a class="collapse-item" href="{{route('department.create')}}"> <i class="fa fa-user-plus">{{ __('Thêm mới') }}</i></a>
+                <a class="collapse-item" href=""> <i class="fa fa-user-edit">{{__('Thay đổi')}}</i></a>
+            </div>
+        </div>
+    </li>
+    <li class="nav-item">
+        <a href="#" class="nav-link" data-toggle="collapse" data-target="#collapseRole" aria-expanded="true" aria-controls="collapseTwo">
+            <span>{{__('vai trò')}}</span>
+        </a>
+        <div id="collapseRole" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a href="{{route('roles.create')}}" class="collapse-item"><i class="fa fa-robot mr-2"></i>{{__('Tạo vai trò')}}</a>
+                <a href="{{route('roles.index')}}" class="collapse-item"><i class="fa fa-list mr-2"></i>{{__('Danh sách vai trò')}}</a>
             </div>
         </div>
     </li>

@@ -24,7 +24,7 @@
                                       <li><a href="tel:0343754517" title="Contact">
                                               <h5>0343754517</h5>
                                           </a></li>
-                                      <li><a href=#" title="wishlist">
+                                      <li><a href="#" title="wishlist">
                                               <h5>Hỗ trợ mua hàng</h5>
                                           </a></li>
 
@@ -65,7 +65,7 @@
                                       <a href="#"><i class="fa fa-shopping-cart"></i>
                                           @if (session()->has('cart'))
                                               @php $sanpham= session()->get('cart') @endphp {{ $sanpham->totalQuantity }} -
-                                              {{ number_format($sanpham->totalPrice), 2 }}đ
+                                              {{ number_format($sanpham->totalPrice) . 2 }}đ
                                           @else
                                               0  - 0đ
                                           @endif
@@ -122,7 +122,7 @@
                                               </div>
                                               <div class="cart_button">
                                                   <a href="/cart">Xem giỏ hàng</a>
-                                                  <a href="{{ route('checkout') }}" style="pointer-events: none"">Thanh
+                                                  <a href="{{ route('checkout') }}" style="pointer-events: none" >Thanh
                                                       Toán</a>
                                               </div>
                                           @endif

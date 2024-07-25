@@ -1,4 +1,4 @@
-<a href="https://chat.zalo.me/?phone=0343754517" id="linkzalo" target="_blank" rel="noopener noreferrer">
+<a href="https://chat.zalo.me/?phone=0977759480" id="linkzalo" target="_blank" rel="noopener noreferrer">
     <div id="fcta-zalo-tracking" class="fcta-zalo-mess">
         <span id="fcta-zalo-tracking">Chat hỗ trợ</span>
     </div>

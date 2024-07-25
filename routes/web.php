@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\themeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Auth::routes(['register'=>false]);
+    Auth::routes(['register'=>false]);
 
 Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::get('/','AdminController@index')->name('admin');
@@ -22,6 +23,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     })->name('file-manager');
     // Tà khoản
     Route::resource('users','UsersController');
+    //roles
+    Route::resource('roles','RolesController');
     // Banner
     Route::resource('banner','BannerController');
     // Brand
@@ -56,7 +59,8 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     Route::resource('/coupon','CouponController');
     // Cài đặt
     Route::get('settings','AdminController@settings')->name('settings');
-
+    //khách hàng
+    
     //Đơn hàng
     Route::get('order','DonHangController@order')->name('order.index');
     Route::get('/income','DonHangController@incomchat')->name('order.income');
@@ -72,6 +76,11 @@ Route::group(['prefix'=>'/admin','middleware'=>['auth','admin']],function(){
     // Password Change
     Route::get('change-password', 'AdminController@changePassword')->name('change.password.form');
     Route::post('change-password', 'AdminController@changPasswordStore')->name('change.password');
+    // department
+    route::resource('department', 'DepartmentController');
+    route::get('department-index', 'DepartmentController@index')->name('department.index');
+
+    Route::post('/theme',[themeController::class,'index'])->name('theme.change');
 });
 
 

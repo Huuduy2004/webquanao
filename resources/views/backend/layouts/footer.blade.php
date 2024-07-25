@@ -2,7 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; <a href="#"></a> {{ date('Y') }}  BY Nguyễn Khánh Tv</span>
+            <span>Copyright &copy; <a href="#"></a> {{ date('Y') }}  NQT </span>
         </div>
     </div>
 </footer>

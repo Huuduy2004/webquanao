@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('password')->nullable();
             $table->string('address')->nullable();
             $table->string('photo')->nullable();
-            $table->integer('loaitk');
+            $table->integer('loaitk')->nullable();
             $table->string('provider')->nullable();
             $table->string('provider_id')->nullable();
             $table->integer('status');
@@ -34,9 +34,9 @@ class CreateUsersTable extends Migration
         DB::table('users')->insert([
             'name'=>'admin',
             'email'=>'admin@gmail.com',
-            'phone'=>'0343754517',
+            'phone'=>'0987654321',
             'password'=>Hash::make('123456'),
-            'address'=>'55A Kha Vạn Cân,Linh Đông,Thủ Đức,TP Hồ Chí Minh',
+            'address'=>'Bương bún',
             'photo'=>'admin.jpg',
             'loaitk'=>1,
             'status'=>1,

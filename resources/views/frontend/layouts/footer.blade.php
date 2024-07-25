@@ -9,7 +9,7 @@
                          
                           <p>{!!$settings->description!!}</p>
                           <div class="footer_widget_contect">
-                              <p><i class="fa fa-map-marker" aria-hidden="true"></i>{{$settings->address}}</p>
+                              <a href="google.com.vn"><i class="fa fa-map-marker" aria-hidden="true"></i>{{$settings->address}}</a>
 
                               <p><i class="fa fa-mobile" aria-hidden="true"></i> {{$settings->phone}}</p>
                               <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>
@@ -70,7 +70,7 @@
                   <div class="col-lg-6 col-md-6">
                       <div class="copyright_area">
                           
-                          <p>Copyright &copy; 2022 <a href="#">Nguyễn Khánh TV</a>. All rights reserved. </p>
+                          <p>Copyright &copy; 2022 <a href="#">NQT</a>. All rights reserved. </p>
                       </div>
                   </div>
                   <div class="col-lg-6 col-md-6">
@@ -143,7 +143,7 @@
 
 <script>
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        document.getElementById("linkzalo").href = "https://zalo.me/0343754517";
+        document.getElementById("linkzalo").href = "https://zalo.me/0977759480";
     }
 </script>
 

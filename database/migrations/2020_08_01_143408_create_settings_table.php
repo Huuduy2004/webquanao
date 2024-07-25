@@ -31,9 +31,9 @@ class CreateSettingsTable extends Migration
             'short_des'=>'aaa',
             'logo'=>'null',
             'photo'=>'null',
-            'address'=>'Số 16, đường Lý Chính Thắng, phường 8, quận 3, Tp. Hồ Chí Minh',
-            'phone'=>'0343754517',
-            'email'=>'kq909981@gmail.com',
+            'address'=>'Buong bun',
+            'phone'=>'0977759480',
+            'email'=>'nqt3091998@gmail.com',
         ]);
 
     }

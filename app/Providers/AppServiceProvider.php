@@ -34,7 +34,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('frontend.layouts.header',function($view){
             $logo=DB::table('settings')->get();
-            $discount=\DB::table('products')->where('status','1')->where('discount','>','0')->select('discount')->distinct()->get('discount');
+            $discount=DB::table('products')->where('status','1')->where('discount','>','0')->select('discount')->distinct()->get('discount');
             $category=Category::where('status','1')->where('is_parent','1')->limit(3)->get();
             $view->with('category',$category)->with('logo',$logo)->with('discount',$discount);
         });

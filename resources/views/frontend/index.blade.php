@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master')
 @section('main-content')
-@section('title','Thời Trang Nam Nữ Gille')
+@section('title','Thời Trang Gille')
  <!--pos home section-->
  <div class="pos_home_section">
     <div class="row">
@@ -54,7 +54,7 @@
                            </div>
                         </div>
                         <div class="product_content">
-                            <span class="old-price">{{number_format($product->price),2}}đ</span>
+                            <span class="old-price">{{number_format($product->price) . 2}}đ</span>
                             <h3 class="product_title"><a href="{{route('productview',$product->slug)}}">{{$product->title}}</a></h3>
                         </div>
                         <div class="product_info">
@@ -132,7 +132,7 @@
                            </div>
                         </div>
                         <div class="product_content">
-                            <span class="old-price">{{number_format($product->price),2}}đ</span>
+                            <span class="old-price">{{number_format($product->price) . 2}}đ</span>
                             <h3 class="product_title"><a href="{{route('product-detail',$product->slug)}}">{{$product->title}}</a></h3>
                         </div>
                         <div class="product_info">
@@ -286,10 +286,10 @@
                                         $giakm=($product->price-($product->price*$product->discount)/100);
                                     @endphp
                                     @if($product->discount !=0)
-                                    <span class="new_price">{{number_format($giakm),2}}đ</span>
-                                    <span class="old_price">{{number_format($product->price),2}}đ</span>
+                                    <span class="new_price">{{number_format($giakm) . 2}}đ</span>
+                                    <span class="old_price">{{number_format($product->price) . 2}}đ</span>
                                     @else
-                                    <span class="new_price">{{number_format($product->price),2}}đ</span>
+                                    <span class="new_price">{{number_format($product->price) . 2}}đ</span>
                                     @endif
                                 </div>
                                 <div class="modal_content mb-10">
@@ -298,7 +298,7 @@
                                 <div class="modal_size mb-15">
                                     <h2>size</h2>
                                     @php
-                                        $size=explode(',',$product->size)
+                                        $size=explode('.',$product->size)
                                     @endphp
                                     <ul>
                                         @foreach($size as $sizes)
@@ -415,7 +415,7 @@
                                         $giakm=($product->price-($product->price*$product->discount)/100);
                                     @endphp
                                     @if($product->discount !=0)
-                                    <span class="new_price">{{number_format($giakm),2}}đ</span>
+                                    <span class="new_price">{{number_format($giakm) . 2}}đ</span>
                                     <span class="old_price">{{number_format($product->price),2}}đ</span>
                                     @else
                                     <span class="new_price">{{number_format($product->price),2}}đ</span>

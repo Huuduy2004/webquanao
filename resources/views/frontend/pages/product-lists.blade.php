@@ -50,8 +50,8 @@
                                                 @endforeach
                                             </ul>
                                         @else
-                                <li> <a
-                                        href="{{ route('product-cat', $cat_info->slug) }}">{{ $cat_info->title }}">{{ $cat_info->title }}</a>
+                                <li> 
+                                    <a href="{{ route('product-cat', $cat_info->slug) }}">{{ $cat_info->title }}">{{ $cat_info->title }}</a>
                                 </li>
                             @endif
                             @endforeach

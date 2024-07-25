@@ -52,7 +52,7 @@
                                             ZaloPay
                                         @endif
                                     </td>
-                                    <td>{{ number_format($order->tongtien), 2 }}VNĐ</td>
+                                    <td>{{ number_format($order->tongtien) . 2 }}VNĐ</td>
                                     <td>
                                         @if ($order->trangthaitt == '1')
                                             <span class="badge badge-danger">{{ _('Chờ Tiếp Nhận') }}</span>

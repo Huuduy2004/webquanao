@@ -54,7 +54,7 @@
           <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Auth()->user()->name}}</span>
           @if(Auth()->user()->photo)
             <img class="img-profile rounded-circle" src="{{Auth()->user()->photo}}">
-          @else
+          @else 
             <img class="img-profile rounded-circle" src="{{asset('backend/img/avatar.png')}}">
           @endif
         </a>

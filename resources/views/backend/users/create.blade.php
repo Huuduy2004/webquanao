@@ -54,26 +54,37 @@
           <span class="text-danger">{{$message}}</span>
           @enderror
         </div>
-        @php
-        $roles=DB::table('users')->select('role')->get();
-        @endphp
+        {{-- @php
+        $roles=DB::table('roles')->select('jobTitle')->get();
+        @endphp --}}
         <div class="form-group">
             <label for="role" class="col-form-label">Quyền truy cập</label>
             <select name="role" class="form-control">
                 <option value="">-----Select Role-----</option>
-                @foreach($roles as $role)
-                    <option value="{{$role->role}}">{{$role->role}}</option>
-                @endforeach
+                {{-- @foreach($user as $roles->role_id)
+                    <option value="{{$roles->jobTitle}}">{{$roles->jobTitle}}</option>
+                @endforeach --}}
+                <option value="{{old('jobTitle')}}"></option>
             </select>
-          @error('role')
+          @error('role')  
           <span class="text-danger">{{$message}}</span>
           @enderror
           </div>
           <div class="form-group">
+            <label for="loaitk" class="col-form-label">Loaitk</label>
+            <select name="loaitk" id="" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+            @error('loaitk')
+                <span class="text-danger">{{$message}}</span>
+            @enderror
+          </div>
+          <div class="form-group">
             <label for="status" class="col-form-label">Trạng thái</label>
             <select name="status" class="form-control">
-                <option value="active">Active</option>
-                <option value="inactive">Inactive</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
             </select>
           @error('status')
           <span class="text-danger">{{$message}}</span>

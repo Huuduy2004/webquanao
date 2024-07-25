@@ -136,7 +136,7 @@
                         <form action="{{ route('single-add-cart', $product_detail->id) }}" method="POST">
                             @csrf
 
-                            <input min="1" name="quantity" max="max="{{ $product_detail->stock }}""
+                            <input min="1" name="quantity" max="max='{{ $product_detail->stock }}' "
                                 value="1" type="number">
                             <button type="submit"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ</button>
                         </form>
